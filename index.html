@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://kit.fontawesome.com/95f68113d2.js" crossorigin="anonymous"></script>
+    <style media="screen">
+    *{
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+        font-family: Verdana;
+        text-transform: capitalize;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        margin: 15px;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, #090b38 0%, rgb(212, 212, 94) 30%, rgb(207, 171, 70) 50%, rgb(255, 102, 0) 70%,#0a3307 90%);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+}
+    .container{
+        height: 450px;
+        width: 330px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(255,0,0,0.5);
+        padding: 10px;
+        overflow: auto;
+    }
+    #input {
+        height: 40px;
+        min-width: 85%;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #666;
+        color: #fff;
+        padding: 0 10px;
+        margin: 1em 0;
+    }
+    #add-btn{
+        height: 40px;
+        width: 40px;
+        border: 0;
+        margin-left: 5px;
+        border-radius: 5px;
+        background-color: #000000;
+        color: #fff;
+    }
+
+    #input::placeholder {
+        color: #bbb;
+    }
+
+    input{
+        height: 50px;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #666;
+        color: #fff;
+        padding: 0 10px;
+        margin: 15px 0;
+    }
+
+     input::placeholder{
+        color: #fff;
+     }
+
+    button {
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: pointer;
+        box-sizing: border-box;
+        background-color: buttonface;
+        height: 10%;
+        width: 15%;
+        margin: 0px;
+        padding: 7px 8px;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonborder;
+        border-image: initial;
+        background: linear-gradient(45deg, #bb6, #666);
+        color: black;
+        border-radius: 5px;
+     }
+
+    ul {
+        background: #eee;
+        color: #333;
+        height: 80%;
+        border-radius: 7px;
+        margin: 15px 0;
+        padding: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    ul .fa-check, .fa-trash {
+        cursor: pointer;
+    }
+
+    ul li{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+        white-space: normal;
+        word-break: break-all;
+        margin: 5px 0;
+    }
+
+   ul .fa-check {
+        right: 40px;
+        color: green;
+    }
+  ul .fa-trash {
+        right: 40px;
+        color: red;
+    }
+@keyframes gradient {
+     0% {
+           background-position: 0% 50%;
+        }
+    50% {
+           background-position: 100% 50%;
+        }
+    100% {
+           background-position: 0% 50%;
+         }
+}
+    </style>
+    
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="input" placeholder="Press enter to add">
+        <button id="add-btn" type="button">+</button>
+        <ul></ul>
+    </div>
+    <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="index.js"></script>
+</body>
+</html>
